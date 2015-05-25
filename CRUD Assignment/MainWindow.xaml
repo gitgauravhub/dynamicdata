@@ -1,0 +1,80 @@
+﻿<Window x:Class="WpfApplication2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="UserName" Style="{StaticResource TextblockStyle}"/>
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Salary" Style="{StaticResource TextblockStyle}"/>
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Email Address" Style="{StaticResource TextblockStyle}"/>
+        <StackPanel Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="SAVE" Style="{StaticResource ButtonStyle}" Command="{Binding SaveCommand}"></Button>
+            <Button Content="UPDATE" Style="{StaticResource ButtonStyle}" Command="{Binding UpdateCommand}"></Button>
+            <Button Content="Delete" Style="{StaticResource ButtonStyle}" Command="{Binding DeleteCommand}"></Button>
+        </StackPanel>
+        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding txtName}" Style="{StaticResource TextboxStyle}"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding txtSalary}" Style="{StaticResource TextboxStyle}"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding txtEmailAddress}" Style="{StaticResource TextboxStyle}"/>
+        <DataGrid Name="dgEmployee" AutoGenerateColumns="False" ItemsSource="{Binding Employees}" Grid.Row="4" Grid.Column="1" SelectedItem="{Binding SelectEmployee,Mode=TwoWay}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
+                <DataGridTemplateColumn Header="Salary">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Salary}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Email Address">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding EmailAddress}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!--<DataGrid Grid.Row="4" Grid.ColumnSpan="2"  Name="dgEmployee" Background="Red" 
+                  AutoGenerateColumns="false" 
+                      ItemsSource="{Binding Employees}"
+                  SelectedItem="{Binding SelectEmployee}" >
+
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="Name">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock  Text="{Binding Path=Employees,  Mode=TwoWay}" ToolTip="{Binding Path=txtName}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Email Address">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding txtEmailAddress}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Salary">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding txtSalary}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>-->
+    </Grid>
+</Window>
