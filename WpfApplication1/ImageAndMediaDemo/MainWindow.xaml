@@ -1,0 +1,9 @@
+﻿<Window x:Class="ImageAndMediaDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <!--<Image Source="Images/Tulips.jpg" Stretch="Uniform" />-->
+        <MediaElement Height="250" Width="450"  Margin="10,10,10,0" Source="D:\GB\Visual Studio Projects\WpfApplication1\ImageAndMediaDemo\Media/Relax.mp4" />
+    </Grid>
+</Window>

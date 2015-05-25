@@ -1,0 +1,22 @@
+﻿<Window x:Class="Canvas.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Canvas>
+        <Rectangle Canvas.Left="25"
+                   Canvas.Top="25"
+                   Width="50"
+                   Height="40"
+                   Fill="Red"/>
+        <Rectangle Canvas.Left="100"
+                   Canvas.Top="25"
+                   Width="50"
+                   Height="40"
+                   Fill="Orange"/>
+        <Rectangle Canvas.Left="120"
+                   Canvas.Top="40"
+                   Width="50"
+                   Height="40"
+                   Fill="Blue"/>
+    </Canvas>
+</Window>
