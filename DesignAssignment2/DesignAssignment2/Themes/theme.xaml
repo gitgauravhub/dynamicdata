@@ -4,9 +4,7 @@
     <BitmapImage x:Key="MyImageSource" UriSource="/DesignAssignment2;component/Media/RadioTower.png" />
     <BitmapImage x:Key="MyImageSource1" UriSource="/DesignAssignment2;component/Media/Cut.png" />
     <BitmapImage x:Key="MyImageSource2" UriSource="/DesignAssignment2;component/Media/Link.png" />
-    <BitmapImage x:Key="MyImageSource2" UriSource="/DesignAssignment2;component/Media/Link.png" />
-    
-    
+    <BitmapImage x:Key="MyImageSource3" UriSource="/DesignAssignment2;component/Media/ZU2.PNG" />
     <LinearGradientBrush x:Key="buttonStyleGradient"  EndPoint="0.5,1" StartPoint="0.5,0">
         <GradientStop Color="White" Offset="0" />
         <GradientStop Color="#FDECA7" Offset="1" />
@@ -26,8 +24,8 @@
     </LinearGradientBrush>
 
     <LinearGradientBrush x:Key="buttonStyleGradientGrayish" EndPoint="0.5,0.5" StartPoint="0.5,0">
-        <GradientStop Color="LightGray" Offset="0" />
-        <GradientStop Color="#333333" Offset="1" />
+        <GradientStop Color="#727272" Offset="0.8" />
+        <GradientStop Color="#595959" Offset="0.8" />
     </LinearGradientBrush>
 
 
@@ -254,29 +252,21 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style TargetType="ComboBox" x:Key="ComboBoxStyle">
-        <Setter Property="Margin" Value="10,5"></Setter>
-        <Setter Property="HorizontalAlignment" Value="Left"></Setter>
-        <Setter Property="Height" Value="25"></Setter>
-        <Setter Property="Width" Value="250"></Setter>
-        <Setter Property="VerticalAlignment" Value="Top"></Setter>
-    </Style>
-
     <ControlTemplate TargetType="GroupBox" x:Key="GroupBox">
         <Border   BorderThickness="2,2,2,2"
-              BorderBrush="Gray">
+              BorderBrush="#595959" CornerRadius="4" SnapsToDevicePixels="True">
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
+                <RowDefinition Height="28px" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
             <Border Grid.Row="0"
              
-              
-              Background="{StaticResource buttonStyleGradientGrayish}">
+              CornerRadius="4,4,0,0"
+              Background="{StaticResource buttonStyleGradientGrayish}" SnapsToDevicePixels="True">
                     <Label Foreground="#FFBF41" >
-                        <ContentPresenter Margin="4"
+                        <ContentPresenter 
                           ContentSource="Header"
                           RecognizesAccessKey="True" />
                 </Label>
