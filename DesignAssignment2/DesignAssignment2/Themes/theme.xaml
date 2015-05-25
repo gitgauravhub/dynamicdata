@@ -21,7 +21,7 @@
 
     <LinearGradientBrush x:Key="buttonStyleGradientGray" EndPoint="0.5,1" StartPoint="0.5,0">
         <GradientStop Color="#8C8C8C" Offset="0" />
-        <GradientStop Color="#333333" Offset="1" />
+        <GradientStop Color="#595959" Offset="1" />
     </LinearGradientBrush>
 
     <LinearGradientBrush x:Key="buttonStyleGradientGrayish" EndPoint="0.5,0.5" StartPoint="0.5,0">
@@ -47,8 +47,8 @@
                 </DoubleAnimationUsingKeyFrames>
             </Storyboard>
         </ControlTemplate.Resources>
-        <Border BorderBrush="#FFFFFFFF"  CornerRadius="2" Height="33" Width="110" Margin="3,3,3,3">
-            <Border x:Name="border" Background="{StaticResource buttonStyleGradientGray}" BorderBrush="Gray" BorderThickness="1,1,1,1" CornerRadius="2">
+        <Border  CornerRadius="2" Height="33" Width="110" Margin="3,3,3,3">
+            <Border x:Name="border" Background="{StaticResource buttonStyleGradientGray}"  CornerRadius="2">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="0.507*"/>
@@ -121,7 +121,7 @@
             </Storyboard>
         </ControlTemplate.Resources>
         <Border BorderBrush="#FFFFFFFF"  CornerRadius="2" Height="33" Width="110" Margin="3,3,3,3">
-            <Border x:Name="border" Background="{StaticResource buttonStyleGradientGray}" BorderBrush="Gray" BorderThickness="1,1,1,1" CornerRadius="2">
+            <Border x:Name="border" Background="{StaticResource buttonStyleGradientGray}"  CornerRadius="2">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="0.507*"/>
@@ -194,7 +194,7 @@
             </Storyboard>
         </ControlTemplate.Resources>
         <Border BorderBrush="#FFFFFFFF"  CornerRadius="2" Height="33" Width="110" Margin="3,3,3,3">
-            <Border x:Name="border" Background="{StaticResource buttonStyleGradientGray}" BorderBrush="Gray" BorderThickness="1,1,1,1" CornerRadius="2">
+            <Border x:Name="border" Background="{StaticResource buttonStyleGradientGray}"  CornerRadius="2">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="0.507*"/>
