@@ -5,6 +5,7 @@
     <BitmapImage x:Key="MyImageSource1" UriSource="/DesignAssignment2;component/Media/Cut.png" />
     <BitmapImage x:Key="MyImageSource2" UriSource="/DesignAssignment2;component/Media/Link.png" />
     <BitmapImage x:Key="MyImageSource3" UriSource="/DesignAssignment2;component/Media/ZU2.PNG" />
+    <BitmapImage x:Key="MyImageSource4" UriSource="/DesignAssignment2;component/Media/dotbay.PNG" />
     <LinearGradientBrush x:Key="buttonStyleGradient"  EndPoint="0.5,1" StartPoint="0.5,0">
         <GradientStop Color="White" Offset="0" />
         <GradientStop Color="#FDECA7" Offset="1" />
