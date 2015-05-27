@@ -19,12 +19,12 @@
         <GradientStop Color="#318225" Offset="1" />
     </LinearGradientBrush>
 
-    <LinearGradientBrush x:Key="buttonStyleGradientGray" EndPoint="0.5,1" StartPoint="0.5,0">
+    <LinearGradientBrush x:Key="buttonStyleGradientGray" EndPoint="0,1" StartPoint="0,0">
         <GradientStop Color="#8C8C8C" Offset="0" />
         <GradientStop Color="#595959" Offset="1" />
     </LinearGradientBrush>
 
-    <LinearGradientBrush x:Key="buttonStyleGradientGrayish" EndPoint="0.5,0.5" StartPoint="0.5,0">
+    <LinearGradientBrush x:Key="buttonStyleGradientGrayish" EndPoint="0,0.6" StartPoint="0,0">
         <GradientStop Color="#727272" Offset="0.8" />
         <GradientStop Color="#595959" Offset="0.8" />
     </LinearGradientBrush>
@@ -254,7 +254,7 @@
     </ControlTemplate>
 
     <ControlTemplate TargetType="GroupBox" x:Key="GroupBox">
-        <Border   BorderThickness="2,2,2,2"
+        <Border  BorderThickness="2,2,2,2"
               BorderBrush="#595959" CornerRadius="4" SnapsToDevicePixels="True">
         <Grid>
             <Grid.RowDefinitions>

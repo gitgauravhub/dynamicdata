@@ -82,14 +82,14 @@ namespace WpfApplication2.ViewModel
 
         public Employee SelectEmployee
         {
-            get 
-            { 
-                return _selectedEmployee; 
+            get
+            {
+                return _selectedEmployee;
             }
-            set 
-            { 
+            set
+            {
                 _selectedEmployee = value;
-                if (_selectedEmployee!=null)
+                if (_selectedEmployee != null)
                 {
                     txtName = _selectedEmployee.Name;
                     txtEmailAddress = _selectedEmployee.EmailAddress;
@@ -98,38 +98,46 @@ namespace WpfApplication2.ViewModel
             }
         }
 
-        ObservableCollection<Employee> _Employee;
+        ObservableCollection<EmployeeVM> _Employee;
 
-        public ObservableCollection<Employee> Employees
+        public ObservableCollection<EmployeeVM> Employees
         {
             get
             {
-                _Employee = new ObservableCollection<Employee>(EmployeeRepository.GetEmployeeFromDatabase());
+                var data = new List<Employee>(EmployeeRepository.GetEmployeeFromDatabase());
+                if (data.Count > 0)
+                {
+                    _Employee = new ObservableCollection<EmployeeVM>();
+                    foreach (var item in data)
+                    {
+                        _Employee.Add(new EmployeeVM() { txtEmailAddress = item.EmailAddress, txtName = item.Name, txtSalary = item.Salary });
+                    }
+                }
                 return _Employee;
             }
-            set 
+            set
             {
                 _Employee = value;
-               // OnPropertyChanged();
+                // OnPropertyChanged();
             }
         }
 
 
         Employee _employee;
-        public Employee employee 
+        public Employee employee
         {
-            get 
+            get
             {
                 _employee = new Employee();
                 return _employee;
             }
-            set 
+            set
             {
                 _employee = value;
                 txtSalary = value.Salary;
                 txtEmailAddress = value.EmailAddress;
                 txtName = value.Name;
-                OnPropertyChanged("employee");            
+                OnPropertyChanged("employee");
             }
         }
 

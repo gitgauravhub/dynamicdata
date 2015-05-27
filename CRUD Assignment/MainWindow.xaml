@@ -27,18 +27,18 @@
         <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding txtEmailAddress}" Style="{StaticResource TextboxStyle}"/>
         <DataGrid Name="dgEmployee" AutoGenerateColumns="False" ItemsSource="{Binding Employees}" Grid.Row="4" Grid.Column="1" SelectedItem="{Binding SelectEmployee,Mode=TwoWay}">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
+                <DataGridTextColumn Header="Name" Binding="{Binding txtName}" />
                 <DataGridTemplateColumn Header="Salary">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <TextBlock Text="{Binding Salary}" />
+                            <TextBlock Text="{Binding txtSalary}" />
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
                 <DataGridTemplateColumn Header="Email Address">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <TextBlock Text="{Binding EmailAddress}"/>
+                            <TextBlock Text="{Binding txtEmailAddress}"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
