@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@*<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title ng-bind="helloAngular"></title>
+</head>
+<body>
+
+    <input type="text" ng-model="helloAngular" />
+    <h1>{{helloAngular}}</h1>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+</body>
+</html>*@
+
+@*<!DOCTYPE html>
+<html ng-app="AwesomeAngularMVCApp" ng-controller="LandingPageController">
+<head>
+    <title ng-bind="models.helloAngular"></title>
+</head>
+<body>
+    <input type="text" ng-model="models.helloAngular" />
+    <h1>{{models.helloAngular}}</h1>
+    
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+    @Scripts.Render("~/bundles/AwesomeAngularMVCApp")
+</body>
+</html>*@
+
+@*First of all, we need to include Angular's ngRoute module, which I'm going to pull down from Cloudflare
+Next, let's add that container div to our landing page, inside the body tag, before our script tags
+Finally, we will add a couple of links to our landing page,
+which, when clicked will update the route and load the appropriate view into the container div*@
+
+<!DOCTYPE html>
+<html ng-app="AwesomeAngularMVCApp" ng-controller="LandingPageController">
+<head>
+    <title ng-bind="models.helloAngular"></title>
+</head>
+<body>
+    <h1>{{models.helloAngular}}</h1>
+
+    <ul>
+        <li><a href="/#/routeOne">Route One</a></li>
+        <li><a href="/#/routeTwo/5">Route Two</a></li>
+        <li><a href="/#/routeThree">Route Three</a></li>
+    </ul>
+
+    <div ng-view></div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-route.min.js"></script>
+    @Scripts.Render("~/bundles/AwesomeAngularMVCApp")
+</body>
+</html>
