@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Dev_Frontrush_RailsModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="Dev_Frontrush_RailsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CoachORStaffs" EntityType="Dev_Frontrush_RailsModel.CoachORStaff" />
+  </EntityContainer>
+  <EntityType Name="CoachORStaff">
+    <Key>
+      <PropertyRef Name="CoachORStaffID" />
+    </Key>
+    <Property Name="CoachORStaffID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UniversityID" Type="Int64" Nullable="false" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Username" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="EmailAddress" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="PhoneNo" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="CellPhoneNo" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Address1" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="Address2" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="State" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="City" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Zip" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="ChangeDate" Type="DateTime" Precision="3" />
+    <Property Name="IsEmailQuestionnaire" Type="Boolean" />
+    <Property Name="ISAllowMultipleExport" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="UALogin" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="UAPassword" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="IsComplianceOfficer" Type="Boolean" />
+    <Property Name="IsSmsReplyOnCellPhone" Type="Boolean" />
+    <Property Name="IsDynApprovedSender" Type="Boolean" />
+    <Property Name="IsCalBdayActive" Type="Boolean" Nullable="false" />
+    <Property Name="Photo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="IsAdmissionUser" Type="Int32" />
+    <Property Name="TwilioPhoneNumber" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="LoginAttempts" Type="Int64" Nullable="false" />
+    <Property Name="LoginAttemptDate" Type="DateTime" Precision="3" />
+    <Property Name="IsMessengerUser" Type="Byte" Nullable="false" />
+    <Property Name="IsAthleticDirector" Type="Byte" Nullable="false" />
+  </EntityType>
+</Schema>

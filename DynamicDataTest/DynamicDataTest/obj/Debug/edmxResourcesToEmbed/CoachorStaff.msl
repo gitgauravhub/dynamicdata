@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Dev_Frontrush_RailsModelStoreContainer" CdmEntityContainer="Dev_Frontrush_RailsEntities">
+    <EntitySetMapping Name="CoachORStaffs">
+      <EntityTypeMapping TypeName="Dev_Frontrush_RailsModel.CoachORStaff">
+        <MappingFragment StoreEntitySet="CoachORStaff">
+          <ScalarProperty Name="CoachORStaffID" ColumnName="CoachORStaffID" />
+          <ScalarProperty Name="UniversityID" ColumnName="UniversityID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="CellPhoneNo" ColumnName="CellPhoneNo" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ChangeDate" ColumnName="ChangeDate" />
+          <ScalarProperty Name="IsEmailQuestionnaire" ColumnName="IsEmailQuestionnaire" />
+          <ScalarProperty Name="ISAllowMultipleExport" ColumnName="ISAllowMultipleExport" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UALogin" ColumnName="UALogin" />
+          <ScalarProperty Name="UAPassword" ColumnName="UAPassword" />
+          <ScalarProperty Name="IsComplianceOfficer" ColumnName="IsComplianceOfficer" />
+          <ScalarProperty Name="IsSmsReplyOnCellPhone" ColumnName="IsSmsReplyOnCellPhone" />
+          <ScalarProperty Name="IsDynApprovedSender" ColumnName="IsDynApprovedSender" />
+          <ScalarProperty Name="IsCalBdayActive" ColumnName="IsCalBdayActive" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="IsAdmissionUser" ColumnName="IsAdmissionUser" />
+          <ScalarProperty Name="TwilioPhoneNumber" ColumnName="TwilioPhoneNumber" />
+          <ScalarProperty Name="LoginAttempts" ColumnName="LoginAttempts" />
+          <ScalarProperty Name="LoginAttemptDate" ColumnName="LoginAttemptDate" />
+          <ScalarProperty Name="IsMessengerUser" ColumnName="IsMessengerUser" />
+          <ScalarProperty Name="IsAthleticDirector" ColumnName="IsAthleticDirector" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

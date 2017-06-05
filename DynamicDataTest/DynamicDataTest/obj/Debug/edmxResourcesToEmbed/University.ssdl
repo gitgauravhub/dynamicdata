@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Dev_Frontrush_RailsModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="Dev_Frontrush_RailsModelStoreContainer">
+    <EntitySet Name="CoachORStaff" EntityType="Dev_Frontrush_RailsModel.Store.CoachORStaff" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CoachORStaffSport" EntityType="Dev_Frontrush_RailsModel.Store.CoachORStaffSport" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sport" EntityType="Dev_Frontrush_RailsModel.Store.Sport" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="University" EntityType="Dev_Frontrush_RailsModel.Store.University" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_FRUser_FRUniversity" Association="Dev_Frontrush_RailsModel.Store.FK_FRUser_FRUniversity">
+      <End Role="University" EntitySet="University" />
+      <End Role="CoachORStaff" EntitySet="CoachORStaff" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FRUserSport_FRSport" Association="Dev_Frontrush_RailsModel.Store.FK_FRUserSport_FRSport">
+      <End Role="Sport" EntitySet="Sport" />
+      <End Role="CoachORStaffSport" EntitySet="CoachORStaffSport" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FRUserSport_FRUser" Association="Dev_Frontrush_RailsModel.Store.FK_FRUserSport_FRUser">
+      <End Role="CoachORStaff" EntitySet="CoachORStaff" />
+      <End Role="CoachORStaffSport" EntitySet="CoachORStaffSport" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="CoachORStaff">
+    <Key>
+      <PropertyRef Name="CoachORStaffID" />
+    </Key>
+    <Property Name="CoachORStaffID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UniversityID" Type="bigint" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Username" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Password" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EmailAddress" Type="varchar" MaxLength="100" />
+    <Property Name="PhoneNo" Type="varchar" MaxLength="20" />
+    <Property Name="CellPhoneNo" Type="varchar" MaxLength="20" />
+    <Property Name="Address1" Type="varchar" MaxLength="500" />
+    <Property Name="Address2" Type="varchar" MaxLength="250" />
+    <Property Name="State" Type="varchar" MaxLength="50" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="Zip" Type="varchar" MaxLength="20" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="ChangeDate" Type="datetime" />
+    <Property Name="IsEmailQuestionnaire" Type="bit" />
+    <Property Name="ISAllowMultipleExport" Type="bit" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="UALogin" Type="varchar" MaxLength="50" />
+    <Property Name="UAPassword" Type="varchar" MaxLength="50" />
+    <Property Name="IsComplianceOfficer" Type="bit" />
+    <Property Name="IsSmsReplyOnCellPhone" Type="bit" />
+    <Property Name="IsDynApprovedSender" Type="bit" />
+    <Property Name="IsCalBdayActive" Type="bit" Nullable="false" />
+    <Property Name="Photo" Type="varchar" MaxLength="50" />
+    <Property Name="IsAdmissionUser" Type="int" />
+    <Property Name="TwilioPhoneNumber" Type="varchar" MaxLength="20" />
+    <Property Name="LoginAttempts" Type="bigint" Nullable="false" />
+    <Property Name="LoginAttemptDate" Type="datetime" />
+    <Property Name="IsMessengerUser" Type="tinyint" Nullable="false" />
+    <Property Name="IsAthleticDirector" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CoachORStaffSport">
+    <Key>
+      <PropertyRef Name="CoachSportID" />
+    </Key>
+    <Property Name="CoachSportID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CoachORStaffID" Type="bigint" Nullable="false" />
+    <Property Name="SportID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sport">
+    <Key>
+      <PropertyRef Name="SportID" />
+    </Key>
+    <Property Name="SportID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UniversityID" Type="bigint" Nullable="false" />
+    <Property Name="SportName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="ChangeDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IsUAActive" Type="bit" />
+    <Property Name="RuleGroupID" Type="bigint" />
+    <Property Name="CompliancePeriodID" Type="bigint" />
+    <Property Name="IsFootball" Type="bit" Nullable="false" />
+    <Property Name="Organization" Type="varchar" MaxLength="100" />
+    <Property Name="Division" Type="varchar" MaxLength="100" />
+    <Property Name="IsRSAllowed" Type="bit" />
+  </EntityType>
+  <EntityType Name="University">
+    <Key>
+      <PropertyRef Name="UniversityID" />
+    </Key>
+    <Property Name="UniversityID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UniversityName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="UniversityURL" Type="varchar" MaxLength="200" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="ChangeDate" Type="datetime" />
+    <Property Name="Title" Type="varchar" MaxLength="50" />
+    <Property Name="UniversityLogo" Type="varchar" MaxLength="50" />
+    <Property Name="UniversityLink" Type="varchar" MaxLength="200" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="UniversityKey" Type="varchar" MaxLength="60" />
+    <Property Name="IsAdmission" Type="bit" />
+    <Property Name="UniversityFullName" Type="varchar" MaxLength="100" />
+    <Property Name="State" Type="varchar" MaxLength="100" />
+    <Property Name="DKIM" Type="bit" />
+    <Property Name="IpedID" Type="bigint" />
+  </EntityType>
+  <Association Name="FK_FRUser_FRUniversity">
+    <End Role="University" Type="Dev_Frontrush_RailsModel.Store.University" Multiplicity="1" />
+    <End Role="CoachORStaff" Type="Dev_Frontrush_RailsModel.Store.CoachORStaff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="University">
+        <PropertyRef Name="UniversityID" />
+      </Principal>
+      <Dependent Role="CoachORStaff">
+        <PropertyRef Name="UniversityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FRUserSport_FRSport">
+    <End Role="Sport" Type="Dev_Frontrush_RailsModel.Store.Sport" Multiplicity="1" />
+    <End Role="CoachORStaffSport" Type="Dev_Frontrush_RailsModel.Store.CoachORStaffSport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sport">
+        <PropertyRef Name="SportID" />
+      </Principal>
+      <Dependent Role="CoachORStaffSport">
+        <PropertyRef Name="SportID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FRUserSport_FRUser">
+    <End Role="CoachORStaff" Type="Dev_Frontrush_RailsModel.Store.CoachORStaff" Multiplicity="1" />
+    <End Role="CoachORStaffSport" Type="Dev_Frontrush_RailsModel.Store.CoachORStaffSport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CoachORStaff">
+        <PropertyRef Name="CoachORStaffID" />
+      </Principal>
+      <Dependent Role="CoachORStaffSport">
+        <PropertyRef Name="CoachORStaffID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

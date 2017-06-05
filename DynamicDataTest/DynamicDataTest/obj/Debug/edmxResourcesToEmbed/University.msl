@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Dev_Frontrush_RailsModelStoreContainer" CdmEntityContainer="Dev_Frontrush_RailsEntities6">
+    <EntitySetMapping Name="Universities">
+      <EntityTypeMapping TypeName="Dev_Frontrush_RailsModel.University">
+        <MappingFragment StoreEntitySet="University">
+          <ScalarProperty Name="UniversityID" ColumnName="UniversityID" />
+          <ScalarProperty Name="UniversityName" ColumnName="UniversityName" />
+          <ScalarProperty Name="UniversityURL" ColumnName="UniversityURL" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ChangeDate" ColumnName="ChangeDate" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="UniversityLogo" ColumnName="UniversityLogo" />
+          <ScalarProperty Name="UniversityLink" ColumnName="UniversityLink" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UniversityKey" ColumnName="UniversityKey" />
+          <ScalarProperty Name="IsAdmission" ColumnName="IsAdmission" />
+          <ScalarProperty Name="UniversityFullName" ColumnName="UniversityFullName" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="DKIM" ColumnName="DKIM" />
+          <ScalarProperty Name="IpedID" ColumnName="IpedID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sports">
+      <EntityTypeMapping TypeName="Dev_Frontrush_RailsModel.Sport">
+        <MappingFragment StoreEntitySet="Sport">
+          <ScalarProperty Name="IsRSAllowed" ColumnName="IsRSAllowed" />
+          <ScalarProperty Name="Division" ColumnName="Division" />
+          <ScalarProperty Name="Organization" ColumnName="Organization" />
+          <ScalarProperty Name="IsFootball" ColumnName="IsFootball" />
+          <ScalarProperty Name="CompliancePeriodID" ColumnName="CompliancePeriodID" />
+          <ScalarProperty Name="RuleGroupID" ColumnName="RuleGroupID" />
+          <ScalarProperty Name="IsUAActive" ColumnName="IsUAActive" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ChangeDate" ColumnName="ChangeDate" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="SportName" ColumnName="SportName" />
+          <ScalarProperty Name="UniversityID" ColumnName="UniversityID" />
+          <ScalarProperty Name="SportID" ColumnName="SportID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CoachORStaffs">
+      <EntityTypeMapping TypeName="Dev_Frontrush_RailsModel.CoachORStaff">
+        <MappingFragment StoreEntitySet="CoachORStaff">
+          <ScalarProperty Name="IsAthleticDirector" ColumnName="IsAthleticDirector" />
+          <ScalarProperty Name="IsMessengerUser" ColumnName="IsMessengerUser" />
+          <ScalarProperty Name="LoginAttemptDate" ColumnName="LoginAttemptDate" />
+          <ScalarProperty Name="LoginAttempts" ColumnName="LoginAttempts" />
+          <ScalarProperty Name="TwilioPhoneNumber" ColumnName="TwilioPhoneNumber" />
+          <ScalarProperty Name="IsAdmissionUser" ColumnName="IsAdmissionUser" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="IsCalBdayActive" ColumnName="IsCalBdayActive" />
+          <ScalarProperty Name="IsDynApprovedSender" ColumnName="IsDynApprovedSender" />
+          <ScalarProperty Name="IsSmsReplyOnCellPhone" ColumnName="IsSmsReplyOnCellPhone" />
+          <ScalarProperty Name="IsComplianceOfficer" ColumnName="IsComplianceOfficer" />
+          <ScalarProperty Name="UAPassword" ColumnName="UAPassword" />
+          <ScalarProperty Name="UALogin" ColumnName="UALogin" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ISAllowMultipleExport" ColumnName="ISAllowMultipleExport" />
+          <ScalarProperty Name="IsEmailQuestionnaire" ColumnName="IsEmailQuestionnaire" />
+          <ScalarProperty Name="ChangeDate" ColumnName="ChangeDate" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="CellPhoneNo" ColumnName="CellPhoneNo" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="UniversityID" ColumnName="UniversityID" />
+          <ScalarProperty Name="CoachORStaffID" ColumnName="CoachORStaffID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CoachORStaffSports">
+      <EntityTypeMapping TypeName="Dev_Frontrush_RailsModel.CoachORStaffSport">
+        <MappingFragment StoreEntitySet="CoachORStaffSport">
+          <ScalarProperty Name="SportID" ColumnName="SportID" />
+          <ScalarProperty Name="CoachORStaffID" ColumnName="CoachORStaffID" />
+          <ScalarProperty Name="CoachSportID" ColumnName="CoachSportID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

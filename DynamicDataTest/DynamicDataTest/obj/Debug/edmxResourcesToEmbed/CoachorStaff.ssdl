@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Dev_Frontrush_RailsModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="Dev_Frontrush_RailsModelStoreContainer">
+    <EntitySet Name="CoachORStaff" EntityType="Dev_Frontrush_RailsModel.Store.CoachORStaff" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="CoachORStaff">
+    <Key>
+      <PropertyRef Name="CoachORStaffID" />
+    </Key>
+    <Property Name="CoachORStaffID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UniversityID" Type="bigint" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Username" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Password" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EmailAddress" Type="varchar" MaxLength="100" />
+    <Property Name="PhoneNo" Type="varchar" MaxLength="20" />
+    <Property Name="CellPhoneNo" Type="varchar" MaxLength="20" />
+    <Property Name="Address1" Type="varchar" MaxLength="500" />
+    <Property Name="Address2" Type="varchar" MaxLength="250" />
+    <Property Name="State" Type="varchar" MaxLength="50" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="Zip" Type="varchar" MaxLength="20" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="ChangeDate" Type="datetime" />
+    <Property Name="IsEmailQuestionnaire" Type="bit" />
+    <Property Name="ISAllowMultipleExport" Type="bit" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="UALogin" Type="varchar" MaxLength="50" />
+    <Property Name="UAPassword" Type="varchar" MaxLength="50" />
+    <Property Name="IsComplianceOfficer" Type="bit" />
+    <Property Name="IsSmsReplyOnCellPhone" Type="bit" />
+    <Property Name="IsDynApprovedSender" Type="bit" />
+    <Property Name="IsCalBdayActive" Type="bit" Nullable="false" />
+    <Property Name="Photo" Type="varchar" MaxLength="50" />
+    <Property Name="IsAdmissionUser" Type="int" />
+    <Property Name="TwilioPhoneNumber" Type="varchar" MaxLength="20" />
+    <Property Name="LoginAttempts" Type="bigint" Nullable="false" />
+    <Property Name="LoginAttemptDate" Type="datetime" />
+    <Property Name="IsMessengerUser" Type="tinyint" Nullable="false" />
+    <Property Name="IsAthleticDirector" Type="tinyint" Nullable="false" />
+  </EntityType>
+</Schema>
